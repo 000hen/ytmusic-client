@@ -1,0 +1,30 @@
+{
+    "displayName": "English (United States)",
+    "name": "en-US",
+    "data": [
+        {
+            "location": "default.unknown",
+            "value": "Unknown"
+        },
+        {
+            "location": "default.menu",
+            "value": "Go To"
+        },
+        {
+            "location": "default.menu.show",
+            "value": "Show App"
+        },
+        {
+            "location": "default.menu.home",
+            "value": "Home"
+        },
+        {
+            "location": "default.menu.quit",
+            "value": "Quit"
+        },
+        {
+            "location": "default.menu.openinbrowser",
+            "value": "Open in Browser"
+        }
+    ]
+}

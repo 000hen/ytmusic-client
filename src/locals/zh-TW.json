@@ -1,0 +1,30 @@
+{
+    "displayName": "繁體中文",
+    "name": "zh-TW",
+    "data": [
+        {
+            "location": "default.unknown",
+            "value": "未知"
+        },
+        {
+            "location": "default.menu",
+            "value": "前往"
+        },
+        {
+            "location": "default.menu.show",
+            "value": "顯示應用程式"
+        },
+        {
+            "location": "default.menu.home",
+            "value": "首頁"
+        },
+        {
+            "location": "default.menu.quit",
+            "value": "結束"
+        },
+        {
+            "location": "default.menu.openinbrowser",
+            "value": "在瀏覽器中開啟"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "ytmusic-client",
+  "version": "1.0.0",
+  "description": "This is an unofficial YouTube Music Client with advanced YouTube plugins.",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/000hen/ytmusic-client.git"
+  },
+  "keywords": [
+    "YouTube",
+    "YouTube-Music",
+    "YTMusic",
+    "ytmusic",
+    "yt-music"
+  ],
+  "author": "000hen <muisnowbusiness@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/000hen/ytmusic-client/issues"
+  },
+  "homepage": "https://github.com/000hen/ytmusic-client#readme",
+  "dependencies": {
+    "electron": "^18.0.3",
+    "uuid": "^8.3.2"
+  }
+}
