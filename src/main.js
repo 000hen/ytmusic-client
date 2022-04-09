@@ -5,15 +5,21 @@ const {
     Tray,
     Menu,
     session
-} = require('electron');
+} = require("electron");
 const fs = require('fs');
 const path = require('path');
 const {
     Localization
 } = require('./i18n.js');
+const http = require('https');
 const adDomains = require('./googleAdUrls.json');
+const package = require('../package.json');
 const osLang = global.osLang = Intl.DateTimeFormat().resolvedOptions().locale;
 const locale = global.locale = new Localization(osLang);
+
+const {
+    loadAdBlockerEngine
+} = require('./adBlock.js');
 
 global.isExit = false;
 
@@ -85,7 +91,8 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModule: true,
-            preload: path.join(__dirname, 'preload.js')
+            preload: path.join(__dirname, 'preload.js'),
+            // contextIsolation: false,
         },
         show: false
     });
@@ -95,7 +102,7 @@ function createWindow() {
         submenu: submenu
     }]);
 
-    win.webContents.userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:70.0) Gecko/20100101 Firefox/70.0 YTMusic-Client/1.0.0";
+    win.webContents.userAgent = `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:70.0) Gecko/20100101 Firefox/70.0 YTMusic-Client/${package.version}`;
 
     // var tray = mainWindow.tray = new Tray();
 
@@ -122,16 +129,10 @@ function createWindow() {
 };
 
 app.once('ready', () => {
-    global.mainWin = createWindow();
-    const mainSession = global.mainSession = session.defaultSession;
+    const mainWin = global.mainWin = createWindow();
+    const mainSession = global.mainSession = mainWin.webContents.session.defaultSession;
 
-    mainSession.webRequest.onBeforeRequest((details, callback) => {
-        if (adDomains.data.some(e => details.url.match(e))) {
-            callback({
-                cancel: true
-            });
-            return;
-        }
-        callback({});
-    })
+    loadAdBlockerEngine(mainSession);
 });
+
+app.setAppUserModelId(package.packageName);

@@ -1,5 +1,6 @@
 {
   "name": "ytmusic-client",
+  "packageName": "YouTube Music",
   "version": "1.0.0",
   "description": "This is an unofficial YouTube Music Client with advanced YouTube plugins.",
   "main": "./src/main.js",
@@ -24,7 +25,9 @@
   },
   "homepage": "https://github.com/000hen/ytmusic-client#readme",
   "dependencies": {
+    "@cliqz/adblocker-electron": "^1.23.7",
     "electron": "^18.0.3",
+    "node-fetch": "^2.6.7",
     "uuid": "^8.3.2"
   }
 }
