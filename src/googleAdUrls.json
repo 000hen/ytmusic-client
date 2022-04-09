@@ -7,6 +7,7 @@
         "googletagmanager.com",
         "googlevideo.com/videogoodput",
         "youtube.com/pagead",
-        "youtube.com/api/stats/ads"
+        "youtube.com/api/stats/ads",
+        "youtube.com/api/stats/playback?ns=yt&el=adunit"
     ]
 }

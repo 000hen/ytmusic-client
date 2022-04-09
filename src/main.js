@@ -32,6 +32,38 @@ const submenu = [
         }
     },
     {
+        // Explore
+        label: locale.getLocation("default.menu.explore"),
+        click: () => {
+            toPage("explore");
+        }
+    },
+    {
+        label: "",
+        type: "separator"
+    },
+    {
+        // Favorite
+        label: locale.getLocation("default.menu.favorite"),
+        click: () => {
+            toPage("playlist?list=LM");
+        }
+    },
+    {
+        // History
+        label: locale.getLocation("default.menu.history"),
+        click: () => {
+            toPage("history");
+        }
+    },
+    {
+        // Playlist
+        label: locale.getLocation("default.menu.playlist"),
+        click: () => {
+            toPage("playlist");
+        }
+    },
+    {
         label: "",
         type: "separator"
     },

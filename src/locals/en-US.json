@@ -19,6 +19,22 @@
             "value": "Home"
         },
         {
+            "location": "default.menu.explore",
+            "value": "Explore"
+        },
+        {
+            "location": "default.menu.playlist",
+            "value": "Playlist"
+        },
+        {
+            "location": "default.menu.favorite",
+            "value": "Favorite"
+        },
+        {
+            "location": "default.menu.history",
+            "value": "History"
+        },
+        {
             "location": "default.menu.quit",
             "value": "Quit"
         },

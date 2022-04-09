@@ -19,6 +19,22 @@
             "value": "首頁"
         },
         {
+            "location": "default.menu.explore",
+            "value": "探索"
+        },
+        {
+            "location": "default.menu.playlist",
+            "value": "媒體庫"
+        },
+        {
+            "location": "default.menu.favorite",
+            "value": "我的最愛"
+        },
+        {
+            "location": "default.menu.history",
+            "value": "播放紀錄"
+        },
+        {
             "location": "default.menu.quit",
             "value": "結束"
         },
