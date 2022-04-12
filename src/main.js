@@ -11,8 +11,6 @@ const path = require('path');
 const {
     Localization
 } = require('./i18n.js');
-const http = require('https');
-const adDomains = require('./googleAdUrls.json');
 const package = require('../package.json');
 const osLang = global.osLang = Intl.DateTimeFormat().resolvedOptions().locale;
 const locale = global.locale = new Localization(osLang);
@@ -130,7 +128,7 @@ function createWindow() {
 
 app.once('ready', () => {
     const mainWin = global.mainWin = createWindow();
-    const mainSession = global.mainSession = mainWin.webContents.session.defaultSession;
+    const mainSession = global.mainSession = session.defaultSession;
 
     loadAdBlockerEngine(mainSession);
 });
